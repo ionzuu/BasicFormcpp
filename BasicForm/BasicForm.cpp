@@ -5,20 +5,25 @@
 
 using namespace std;
 
-int Option = 0;
+void InsertName(int Option)
+{
+    system("cls");
+    cout << "You Selected the option: " << Option << endl;
+}
 
 void PrintMenu()
 {
+    int Option = 0;
+
+    cout << "Welcome To My Second C++ Program " << endl;
+    cout << "-------------------------------" << endl;
+    cout << "1-. Insert your name." << endl;
+    cout << "2-. Insert your age." << endl;
+    cout << "3-. Insert where are you from." << endl;
+    cout << "0-. Exit" << endl;
+    cout << "Insert the number of what you want to do? :";
     while (true)
     {
-        cout << "Welcome To My Second C++ Program " << endl;
-        cout << "-------------------------------" <<endl;
-        cout << "1-. Insert your name." << endl;
-        cout << "2-. Insert your age." << endl;
-        cout << "3-. Insert where are you from." << endl;
-        cout << "0-. Exit" << endl;
-        cout << "Insert the number of what you want to do? :";
-    
         cin >> Option;
         if (!cin)
         {
@@ -29,37 +34,37 @@ void PrintMenu()
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             continue;
         }
-        else
-        {
-            switch (Option) {
-            case 0:
-                cout << "Thanks for use my program, have a nice day :)" << endl;
-                system("pause");
-                exit(0);
-                break;
-            case 1:
-                cout << "You Selected the option: " << Option << endl;
-                break;
-            case 2:
-                cout << "You Selected the option: " << Option << endl;
-                break;
-            case 3:
-                cout << "You Selected the option: " << Option << endl;
-                break;
-            default:
-                cout << "Please select a number between 0 and 3" << endl;
-                system("pause");
-                system("cls");
-                break;
-            }
-        }
-    } 
+        else break;
+    }
+    switch (Option)
+    {
+        case 0:
+            cout << "Thanks for use my program, have a nice day :)" << endl;
+            system("pause");
+            exit(0);
+        break;
+        case 1:
+            InsertName(Option);
+        break;
+        case 2:
+            cout << "You Selected the option: " << Option << endl;
+        break;
+        case 3:
+            cout << "You Selected the option: " << Option << endl;
+        break;
+        default:
+            cout << "Please select a number between 0 and 3" << endl;
+            system("pause");
+            system("cls");
+        break;
+    }
 }
 
 int main()
 {
     cout << "Hello World!\n";
     PrintMenu();
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
