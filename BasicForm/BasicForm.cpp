@@ -7,8 +7,41 @@ using namespace std;
 
 void InsertName(int Option)
 {
+    char Name[50];
     system("cls");
     cout << "You Selected the option: " << Option << endl;
+    system("pause");
+    system("cls");
+    cout << "Insert your name: ";
+    cin >> Name;
+    cout << "Your name is: " << Name << endl;
+    system("pause");
+}
+
+void InsertAge(int Option)
+{
+    int Age;
+    system("cls");
+    cout << "You Selected the option: " << Option << endl;
+    system("pause");
+    system("cls");
+    cout << "Insert your age: ";
+    cin >> Age;
+    cout << "Your age is: " << Age << endl;
+    system("pause");
+}
+
+void InsertWhereFrom(int Option)
+{
+    char Location[100];
+    system("cls");
+    cout << "You Selected the option: " << Option << endl;
+    system("pause");
+    system("cls");
+    cout << "Insert where are you from: ";
+    getline(cin >> Location);
+    cout << "Your are from: " << Location << endl;
+    system("pause");
 }
 
 void PrintMenu()
@@ -47,10 +80,10 @@ void PrintMenu()
             InsertName(Option);
         break;
         case 2:
-            cout << "You Selected the option: " << Option << endl;
+            InsertAge(Option);
         break;
         case 3:
-            cout << "You Selected the option: " << Option << endl;
+            InsertWhereFrom(Option);
         break;
         default:
             cout << "Please select a number between 0 and 3" << endl;
